@@ -1,0 +1,17 @@
+<h1>Sorting</h1>
+
+<%= form_for @sort do |f|%>
+  <div>
+    <%= f.label 'Enter a String'%>
+    <%= f.text_field :word%>
+  </div>
+
+  <div>
+    <%= f.label 'Choose sorting method' %>
+    <%= f.select :sorting_method, ["Bubble Sort", "Merge Sort"] %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
