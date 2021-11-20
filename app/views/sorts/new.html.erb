@@ -1,17 +1,23 @@
-<h1>Sorting</h1>
+<div class="container p-5">
+  <center><h1>Skill Test</h1></center>
 
-<%= form_for @sort do |f|%>
-  <div>
-    <%= f.label 'Enter a String'%>
-    <%= f.text_field :word%>
-  </div>
+  <%= form_for @sort do |f|%>
+    <div class="mb-3">
+      <div class="form-label">Enter a String</div>
+      <div>
+        <%= f.text_field :word, class: "form-control" %>
+      </div>
+    </div>
 
-  <div>
-    <%= f.label 'Choose sorting method' %>
-    <%= f.select :sorting_method, ["Bubble Sort", "Quick Sort"] %>
-  </div>
+    <div class="mb-3">
+      <div class="form-label">Choose Sorting Method</div>
+      <div>
+        <%= f.select(:sorting_method, ["Bubble Sort", "Quick Sort"], {}, { :class => "form-control" }) %>
+      </div>
+    </div>
 
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div>
+      <%= f.submit "Sort", class: "btn btn-primary form-control" %>
+    </div>
+  <% end %>
+</div>

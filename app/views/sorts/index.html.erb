@@ -1,18 +1,21 @@
-<table>
-  <thead>
-    <tr>
-      <th>String</th>
-      <th>Sorting Method</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @sorts.each do |sort| %>
-      <tr>
-        <td><%= sort.word %></td>
-        <td><%= sort.sorting_method %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container p-5">
+  <center><h1>Skill Test</h1></center>
 
-<%= link_to "Sort New String", new_sort_path %>
+  <%= link_to "Sort New String", new_sort_path, class: "btn btn-primary" %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>String</th>
+        <th>Sorting Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @sorts.each do |sort| %>
+        <tr>
+          <td><%= sort.word %></td>
+          <td><%= sort.sorting_method %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
